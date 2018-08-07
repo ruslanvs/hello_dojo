@@ -1,0 +1,51 @@
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<div id="app"></div>
+
+<script>
+    const square1 = React.createElement(
+        'p',
+        {style:
+            {
+                backgroundColor: 'blue',
+                color: 'white',
+                display: 'inline-block',
+                width: '300px',
+                height: '300px',
+                fontSize: '30px'
+            }
+        },
+        'white on blue' )
+    const square2 = React.createElement(
+        'p',
+        {style:
+            {
+                backgroundColor: 'red',
+                color: 'blue',
+                display: 'inline-block',
+                width: '300px',
+                height: '300px',
+                fontSize: '30px'
+            }
+        },
+        'blue on red' )
+    const square3 = React.createElement(
+        'p',
+        {style:
+            {
+                backgroundColor: 'pink',
+                color: 'green',
+                display: 'inline-block',
+                width: '300px',
+                height: '300px',
+                fontSize: '30px'
+            }
+        },
+        'green on pink' )
+
+    const elements = React.createElement('div', null, square1, square2, square3);
+    
+    ReactDOM.render(elements, document.getElementById('app'));
+
+</script>
